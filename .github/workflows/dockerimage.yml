@@ -15,10 +15,10 @@ jobs:
       uses: actions/checkout@v2
      
     - name: Login to Docker Hub
-      run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+      run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u hfayaz --password-stdin
    
     - name: Build Docker image
-      run: docker build -t yourdockerusername/yourimage:latest .
+      run: docker build -t hfayaz/calculator-app:latest .
      
     - name: Push Docker image to Docker Hub
-      run: docker push yourdockerusername/yourimage:latest
+      run: docker push hfayaz/calculator-app:latest
